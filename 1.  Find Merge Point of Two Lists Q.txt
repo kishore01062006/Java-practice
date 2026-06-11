@@ -1,0 +1,16 @@
+1.  Find Merge Point of Two Lists Question: Find the node where two
+    linked lists merge and return its data.
+
+Answer: static int findMergeNode(SinglyLinkedListNode head1,
+SinglyLinkedListNode head2) { SinglyLinkedListNode p1 = head1;
+SinglyLinkedListNode p2 = head2;
+
+    while (p1 != p2) {
+        p1 = (p1 == null) ? head2 : p1.next;
+        p2 = (p2 == null) ? head1 : p2.next;
+    }
+
+    return p1.data;
+
+}
+

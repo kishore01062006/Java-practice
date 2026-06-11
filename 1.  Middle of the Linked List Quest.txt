@@ -1,0 +1,15 @@
+1.  Middle of the Linked List Question: Return the middle node. If there
+    are two middle nodes, return the second one.
+
+Answer: class Solution { public ListNode middleNode(ListNode head) {
+ListNode slow = head; ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+    }
+
+}
